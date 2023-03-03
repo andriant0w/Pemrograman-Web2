@@ -10,9 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>
-            Form Nilai Mahasiswa
-        </h2>
+        <h2>Form Nilai Mahasiswa</h2>
 
         <form action="form_hasil.php" method="GET">
         <div class="form-group row">
