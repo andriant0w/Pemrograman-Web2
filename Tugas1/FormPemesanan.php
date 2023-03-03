@@ -12,10 +12,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-            <h5>Sistem Penilaian</h5>
-			<h1>
-				Belanja Online
-      </h1> 
+      <h5>Sistem Penilaian</h5>
+			<h3>Belanja Online</h3> 
       <form method ="POST">
         <div class="form-group row">
           <label for="customer" class="col-4 col-form-label">Customer</label> 
