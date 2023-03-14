@@ -90,6 +90,8 @@
                 <th>domisili</th>
                 <th>prodi</th>
                 <th>skills</th>
+                <th>skor</th>
+                <th>predikat</th>
             </tr>
             <?php
                 if(isset($_POST['submit'])){
@@ -99,7 +101,32 @@
                 $jenis_kelamin = $_POST['jenis_kelamin'];
                 $domisili = $_POST['domisili'];
                 $program_studi = $_POST['program_studi'];
-                $skill_user = $_POST['skill']
+                $skill_user = $_POST['skill'];
+                $skor = 0;
+                foreach($skill_user as $skill) {
+                    if($skill == 'HTML') {
+                        $skor = $skor + 10;
+                    }elseif($skill == 'CSS') {
+                        $skor = $skor + 10;
+                    }elseif($skill == 'JavaScript') {
+                        $skor = $skor + 20;
+                    }elseif($skill == 'PHP') {
+                        $skor = $skor + 30;
+                    }elseif($skill == 'Python') {
+                        $skor = $skor + 30;
+                    }
+                };
+                if($skor == 100){
+                    $predikat = "Sangat Baik";
+                }elseif($skor == 90){
+                    $predikat = "Baik";
+                }elseif($skor >= 70){
+                    $predikat = "Kurang";
+                }elseif($skor >= 40){
+                    $predikat = "Sangat Kurang";
+                }else{
+                    $predikat = "Kureng";
+                }
             ?>
             <tr>
                 <td><?= $nim; ?></td>
@@ -113,6 +140,8 @@
                         echo $skills . " ";       
                     }?>
                 </td>
+                <td><?= $skor; ?></td>
+                <td><?= $predikat; ?></td>
             </tr>
         <?php } ?>
         </table>

@@ -10,9 +10,9 @@ $program_studi = [
 $skills = [
     "HTML"=>10,
     "CSS"=>10,
-    "Javascript"=>20,
+    "JavaScript"=>20,
     "PHP"=>30,
     "Python"=>30
     ];
-
+    
 ?>
